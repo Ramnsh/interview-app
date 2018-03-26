@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row pt-2 pl-0">
+        <div class="col form-inline pl-4">
+            <input id="srchBox" type="text"  size="18" style="font-size:1.5em;padding-left:15px;padding-right:22px;"
+            [(ngModel)]="id" pInputText placeholder="Resource Id" maxlength="5" 
+            [ngStyle]="SetBorder()" (input)="ValidateInput()">
+            <button type="button" 
+                class="btn btn-lg" style="background-color:#0683c9;color:white;font-size:1.5em"
+                [disabled]="!isDisable" (click)="ResourceDtl()" *ngIf="!searchSpinner">
+                &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-search" aria-hidden="true"></i>&nbsp;Find&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </button>            
+            <button type="button" 
+                class="btn btn-lg" style="background-color:#0683c9;color:white;font-size:1.5em"
+                (click)="ResourceDtl()" *ngIf="searchSpinner">                        
+                <i class="fa fa-spinner fa-spin fa-1x fa-fw"></i>&nbsp;Finding...
+            </button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" 
+                class="btn btn-lg" style="background-color:#0683c9;color:white;font-size:1.5em"
+                (click)="ResourceDtl()" *ngIf="!searchSpinner">
+                &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-search" aria-hidden="true"></i>&nbsp;Find All&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </button>
+            <button type="button" 
+                class="btn btn-lg" style="background-color:#0683c9;color:white;font-size:1.5em;margin-left:.5em" routerLink='add/user'>
+                &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-search" aria-hidden="true"></i>&nbsp;Add Resource&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </button>
+        </div>
+    </div>
+    <div class="row pt-0" *ngIf="srchErrorMsg">
+        <div class="col form-inline pl-4">
+                <span class="message_error btn" style="padding-left:.3em;padding-right:.2em;font-size:1.3em;">
+                    <i class="fa fa-window-close" aria-hidden="true" style="padding-right:.3em;"></i>
+                    Enter valid numeric value
+                </span>
+        </div>
+    </div>
+    <resource-detail [resourceDtl]=resourceDtl *ngIf="getRecord" (updateResource)="updateResource($event)"></resource-detail>                
+</div>
+
+<!-- <div class="pt-5 pl-4 pr-5">
+    <p-panel header="Employee Details" styleClass="my-panel">
+        <p-dataTable [value]="empDtl" selectionMode="single" >
+            <p-column field="empId" header="Employee Id"></p-column>
+            <p-column field="empName" header="Employee Name"></p-column>
+            <p-column field="project" header="Project"></p-column>
+            <p-column field="technology" header="Technology"></p-column>
+        </p-dataTable>
+    </p-panel>
+</div> -->

@@ -1,1 +1,79 @@
 /* You can add global styles to this file, and also import other style files */
+label {
+    color: #B4886B;
+    font-weight: bold;
+    display: block;
+    width: 150px;
+    float: left;
+    font-size: 1.5em;
+    }
+    label:after { content: ": " }
+
+    .back-color {
+        background-color: #ebeae8;
+    }
+
+    .ui-widget-content {
+        border: 1px;
+        background: white;
+        border-color: #0683c9;
+    }
+    .ui-panel .ui-panel-content {
+        padding: 0px;
+    }
+
+    .ui-datatable table {
+        border-collapse: collapse;       
+        width:100%;
+        table-layout:fixed;
+        border: .25em .25em .25em .25em; 
+        border-color:#0683c9;
+        border-style: solid;
+        border-width: thin 2px thin;
+
+        }
+
+    .ui-widget-header {
+        background: transparent;
+        border: 1px solid #0683c9;
+        font-size: 2em;
+        font-weight: bold;
+        border: 1px solid #0683c9;
+        color: #0683c9;
+    }
+
+    .ui-datatable th.ui-state-default {
+        background: #0683c9;
+        color: white;
+        border-color:#0683c9;
+    }
+
+    .ui-datatable .ui-datatable-thead>tr>th, .ui-datatable .ui-datatable-tfoot>tr>td, 
+    .ui-datatable .ui-datatable-data>tr>td {
+    border-color: #0683c9 white #0683c9 #0683c9;
+    box-sizing: border-box;
+    padding: .25em .5em;
+    border: 2px 2px 2px 2px;
+    border-style: solid #0683c9;
+    }
+
+    .ui-panel .ui-panel-titlebar {
+        padding: .5em .75em;
+        padding-left: 0em;
+    }
+    
+    .message_error {
+        color:#ab1a0f;
+        background-color:#ffcbc8;
+        border-color:#ffcbc8;	
+        border-radius: 4px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size:2em;
+        padding-top:1em;
+        padding-bottom:1em;
+
+
+    }
+    .modal-lg {
+        max-width: 1200px;
+    }

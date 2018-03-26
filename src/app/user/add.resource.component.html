@@ -1,0 +1,78 @@
+<div class="container">            
+    <form [formGroup]="resForm" autocomplete="off" (ngSubmit)="updateResourceDtl();">
+        <div class="form-group">
+        <div class="row" >
+            <div class="col-6">
+            <label for="surName" style="width:auto">Sur Name</label>
+            </div>
+            <div class="col-6">
+            <label for="name" style="width:auto">Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+            <input type="text" class="form-control" formControlName="surname" id="surName" aria-describedby="surName" placeholder="Enter Sur Name" 
+            style="font-size:1.5em;">
+            </div>
+            <div class="col-6">
+            <input type="text" class="form-control" formControlName="name" id="name" aria-describedby="name" placeholder="Enter Name" 
+            style="font-size:1.5em;">
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-6">
+            <label for="birthDate" style="width:auto">DOB</label>
+            </div>
+            <div class="col-6">
+            <label for="phone" style="width:auto">Phone</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+            <input type="text" class="form-control" formControlName="birthDate" id="birthDate" aria-describedby="birthDate" placeholder="Enter Birth Date" 
+            style="font-size:1.5em;">
+            </div>
+            <div class="col-6">
+            <input type="text" class="form-control" formControlName="phone" id="phone" aria-describedby="phone" placeholder="Enter Phone Number" 
+            style="font-size:1.5em;">
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-6">
+            <label for="city" style="width:auto">City</label>
+            </div>
+            <div class="col-6">
+            <label for="street" style="width:auto">Street</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+            <input type="text" class="form-control" formControlName="city" id="city" aria-describedby="city" placeholder="Enter City" 
+            style="font-size:1.5em;">
+            </div>
+            <div class="col-6">
+            <input type="text" class="form-control" formControlName="street" id="street" aria-describedby="street" placeholder="Enter Street" 
+            style="font-size:1.5em;">
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-6">
+            <label for="city" style="width:auto">Number</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+            <input type="text" class="form-control" formControlName="number" id="number" aria-describedby="number" placeholder="Enter number" 
+            style="font-size:1.5em;">
+            </div>
+            <div class="col-6">
+                    <button type="button" 
+                    class="btn btn-lg" style="background-color:#0683c9;color:white;font-size:1.5em"
+                    (click)="AddResourceDtl()">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-search" aria-hidden="true"></i>&nbsp;Save&nbsp;&nbsp;
+                    </button>
+            </div>    
+        </div>
+    </div>
+</form>
+</div>
